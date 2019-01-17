@@ -14,7 +14,7 @@ $ cd blog
 $ docker-compose up -d
 ```
 
-### Included
+### What's Included
 1. php:7.2-apache
     * nano
     * git
