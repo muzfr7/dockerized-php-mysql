@@ -2,7 +2,9 @@
 
 ### Clone the Repository
 Use below command to clone this repository anywhere you like:
-`$ git clone https://github.com/muzfr7/php72-and-sqlserver.git`
+```
+$ git clone https://github.com/muzfr7/php72-and-sqlserver.git
+```
 
 ### Usage
 Once repository is cloned, you can rename it to what ever  you want e-g: blog
