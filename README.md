@@ -6,9 +6,11 @@ Use below command to clone this repository anywhere you like:
 
 ### Usage
 Once repository is cloned, you can rename it to what ever  you want e-g: blog
-`$ mv php72-and-sqlserver ./blog`
-`$ cd blog`
-`$ docker-compose up -d`
+```
+$ mv php72-and-sqlserver ./blog
+$ cd blog
+$ docker-compose up -d
+```
 
 ### Included
 1. php:7.2-apache
