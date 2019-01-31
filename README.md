@@ -1,22 +1,43 @@
-## DOCKERIZED DEVELOPMENT STACK
-
-### Clone the Repository
-Use below command to clone this repository anywhere you like:
-```
-$ git clone https://github.com/muzfr7/php72-and-sqlserver.git
-```
+## DOCKERIZED PHP | MYSQL
 
 ### Usage
-Once repository is cloned, you can rename it to what ever  you want e-g: blog
 ```
-$ mv php72-and-sqlserver ./blog
+// 1. Use following command to clone this repository
+$ git clone https://github.com/muzfr7/dockerized-php-mysql.git
+
+// 2. Rename the repository to anything in this case I'm renaming it to `blog`
+$ mv dockerized-php-mysql ./blog
+
+// 3. Now change directory into `blog`
 $ cd blog
+
+// 4. Change container names in `docker-compose.yml` file to reflect our project name
+
+// 5. Change `ServerName` and `DocumentRoot` in `etc/000-default.conf`
+
+// 6. Finaly run following Docker command to start containers
 $ docker-compose up -d
+
+// 7. Check if containers are running
+$ docker ps
 ```
 
 ### What's Included
-1. php:7.2-apache
-    * nano
-    * git
-    * composer
-2. mssql-server-linux:2017-CU12
+```
+php:7.1-apache
+mysql:5.7
+composer
+nano
+git
+zlib1g-dev
+zip
+pdo_mysql
+mysqli
+libxslt-dev
+xsl
+libicu-dev
+intl
+```
+
+### Author
+Muzafar Ali Jatoi <muzfr7@gmail.com>

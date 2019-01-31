@@ -2,25 +2,24 @@ version: '3'
 
 services:
 
-    sqlserver:
-        image: microsoft/mssql-server-linux:2017-CU12
-        container_name: pms_sqlserver
+    mysql:
+        image: mysql:5.7
+        container_name: pms_mysql
         volumes:
-            - ./mssql:/var/opt/mssql
+            - ./mysql:/var/lib/mysql
         restart: always
-        environment:
-            ACCEPT_EULA: "Y"
-            SA_PASSWORD: Xx12Xxxxx12
         ports:
-            - 1433:1433
+            - 3307:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
 
-    app:
+    web:
         build: .
-        container_name: pms_app
+        container_name: pms_web
         volumes:
             - ./www:/var/www/html:cached
         restart: always
         ports:
-            - 8181:80
+            - 8080:80
         depends_on:
-            - sqlserver
+            - mysql
